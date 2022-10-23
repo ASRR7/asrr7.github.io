@@ -1,0 +1,175 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif, Arial;
+}
+/* ------------------------- */
+/* --- Estilos Generales --- */
+/* ------------------------- */
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif, Arial;
+    }
+    .titulo {
+        font-size: 5rem;
+        font-weight: 700;
+        color:#b2850b;
+        animation: cambiocolor 1700ms infinite alternate;
+    }
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .flexrow {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    a {
+        text-decoration: none;
+    }
+/* -------------------------- */
+/* -- Estilos particulares -- */
+/* -------------------------- */
+    .jumbotron {
+        width: 100vw;
+        height: 95px;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        background-color:  #0000a4;
+    }
+        /* Versos */
+            .versos {
+                padding: 2% 12% 1.5% 12%;
+                text-align: start;
+                font-size: 1.65rem;
+                color: #000;
+                background:  linear-gradient(to bottom,#0000a4,#3f92f2);
+            }
+            .animado {
+                width: 100%;
+                font-size: 1.85rem;
+            }
+            .animado:first-of-type{
+                margin-top: 600px;
+            }
+            /* Imagen pegajosa y Versos */
+                .primeramitad{
+                    width: 70%;
+                    display: inline-flex;
+                    float: left;
+                }
+                .segundamitad{
+                    width: 25%;
+                    padding-top: 7%;
+                    float: right;
+                    margin-top: 50px;
+                    position: sticky;
+                    top: 0;
+                }
+                .segundamitad img{
+                    width: 90%;
+                }
+            /* Otros veros */
+                .animado1, .animado3{
+                    text-align: left;
+                }
+                .animado2, .animado4{
+                    text-align: right;
+                    margin-top: 60px;
+                }
+        /* Cabecera */
+            .titulocabecera {
+                font-size: 2.5rem;
+            }
+            .cabecera {
+                background: #072160;
+                width: 100%;
+                position: fixed;
+                top: -100;
+                left: 0;
+                z-index: 2;
+                transition: top 1.2s;
+            }
+            .cabecera-transicion {
+                top: 0;
+            }
+        /* Calavera final */
+            .calavera_stan-lee{
+                display: flex;
+                width: 50%;
+                margin: 50px auto 5px auto;
+            }
+        /* Parte de inicio */
+            /* Contenedores */
+                .inicio {
+                    height: 101vh;
+                    font-size: 3rem;
+                }
+                .inicioinfo {
+                    width: 60%;
+                }
+                .inicioimg {
+                    width: 20%;
+                }
+                .flexrow:last-child {
+                    align-items: flex-end;
+                }
+            /* Texto */
+                .datos {
+                    text-align: left;
+                    color: #605f5f;
+                }
+                .datos:first-of-type{
+                    color: #000;
+                }
+                .datos:last-of-type {
+                    color: #838383;
+                }
+            /* Cursor */
+                .cursor {
+                    width: 0%;
+                    position: relative;
+                }
+                .cursor::after{
+                    content: "";
+                    position: absolute;
+                    width: 99%;
+                    height: 100%;
+                    top: 0;
+                    border-left: 1px solid #fff;
+                    background-color:  #0000a4;
+                    right: 0;
+                    animation: escribir 2s infinite alternate steps(10);
+                }
+            /* Imagen */
+                .inicioimg img {
+                    width: 100%;
+                    height: auto;
+                }
+/* ------------------------- */
+/* ------ Animaciones ------ */
+/* ------------------------- */
+    @keyframes escribir {
+        from{
+            width: 100%;
+        }
+        to{
+            width: 0%;
+        }
+    }
+    @keyframes cambiocolor {
+        from{
+            color: #644d0e;
+        }
+        to{
+            color: #bb9019;
+        }
+    }
