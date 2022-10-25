@@ -33,6 +33,17 @@ html,body {
     }
     a {
         text-decoration: none;
+        color: #fff;
+    }
+    #contenedor {
+        border-image-width: 40px;
+        border: 40px solid rgba(1,1,1,0.1);
+        border-image-source: url(../img/papel-picado.png);
+        border-image-slice: 110;
+        border-image-outset: 0px;
+        border-image-repeat: repeat;
+        border-bottom: 0;
+        border-top: 0;
     }
 /* -------------------------- */
 /* -- Estilos particulares -- */
@@ -42,16 +53,18 @@ html,body {
         height: 95px;
         padding: 2%;
         display: flex;
+        position: relative;
         flex-direction: column;
-        background-color:  #0000a4;
+        background-color:  #000065;
     }
         /* Versos */
             .versos {
                 padding: 2% 12% 1.5% 12%;
                 text-align: start;
+                width: 100%;
                 font-size: 1.65rem;
                 color: #000;
-                background:  linear-gradient(to bottom,#0000a4,#3f92f2);
+                background:  linear-gradient(to bottom,#000065,#3f92f2);
             }
             .animado {
                 width: 100%;
@@ -92,14 +105,28 @@ html,body {
             .cabecera {
                 background: #072160;
                 width: 100%;
+                flex-direction: row;
                 position: fixed;
+                justify-content: space-around;
                 top: -100;
+                align-items: center;
                 left: 0;
                 z-index: 2;
                 transition: top 1.2s;
             }
             .cabecera-transicion {
                 top: 0;
+            }
+            .cabecera__imagen {
+                width: 15%;
+                padding: 1%;
+            }
+            .cabecera__imagen img {
+                width: 50%;
+                float: right;
+            }
+            .cabecera__imagen img:first-of-type{
+                float: left;
             }
         /* Calavera final */
             .calavera_stan-lee{
@@ -111,7 +138,7 @@ html,body {
             /* Contenedores */
                 .inicio {
                     height: 101vh;
-                    font-size: 3rem;
+                    font-size: 4.3rem;
                 }
                 .inicioinfo {
                     width: 60%;
@@ -125,13 +152,7 @@ html,body {
             /* Texto */
                 .datos {
                     text-align: left;
-                    color: #605f5f;
-                }
-                .datos:first-of-type{
-                    color: #000;
-                }
-                .datos:last-of-type {
-                    color: #838383;
+                    color: #fff;
                 }
             /* Cursor */
                 .cursor {
@@ -145,15 +166,51 @@ html,body {
                     height: 100%;
                     top: 0;
                     border-left: 1px solid #fff;
-                    background-color:  #0000a4;
+                    background-color:  #000065;
                     right: 0;
-                    animation: escribir 2s infinite alternate steps(10);
+                    animation: escribir 2150ms infinite alternate steps(12);
                 }
             /* Imagen */
                 .inicioimg img {
                     width: 100%;
                     height: auto;
                 }
+            /* Pan Flotante */
+                .img__flotante {
+                    position: absolute;
+                    left: 150px;
+                    bottom: -90px;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+                .img__flotante img {
+                    width: 30%;
+                    height: auto;
+                }
+                .img__flotante img:first-of-type{
+                    width: 20%;
+                }
+        /* Footer */
+        footer {
+            padding: 1%;
+            text-align: center;
+            background: linear-gradient(to top,#000065,#3f92f2);
+        }
+        footer a {
+            font-size: 2rem;
+        }
+        .footer__imagen {
+            margin: 0 auto;
+            align-items: center;
+            width: 90%;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        .footer__imagen img{
+            width: 20%;
+            margin: 0 auto;
+        }
 /* ------------------------- */
 /* ------ Animaciones ------ */
 /* ------------------------- */
@@ -167,9 +224,9 @@ html,body {
     }
     @keyframes cambiocolor {
         from{
-            color: #644d0e;
+            color: #b18200;
         }
         to{
-            color: #bb9019;
+            color: #d8fe00;
         }
     }
