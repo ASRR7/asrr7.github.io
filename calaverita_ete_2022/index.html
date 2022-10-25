@@ -14,20 +14,38 @@
 <body>
     <audio src="audio.mp3" autoplay loop></audio> <!-- Audio extraido del Soundtrack de la película Spider-Man, personaje creado por Stan Lee. Película dirigida por Sam Raimi y Compositor Musical Danny Elfman -->
     <!-- CALAVERA -->
-    <div class="contenedor">
+    <div class="contenedor" id="contenedor">
+        <!-- ---------------- -->
+        <!-- HEADER DE TITULO -->
+        <!-- ---------------- -->
         <header class="flex cabecera" id="cabecera">
-            <h1 class="titulo titulocabecera">Homenaje a Stan Lee</h1>
+            <div class="flex cabecera__imagen">
+                <img src="img/flor.png" alt="Imagen de cempas&uacute;chil.">
+            </div>
+            <div class="flex">
+                <h1 class="titulo titulocabecera">Homenaje a Stan Lee</h1>
+            </div>
+            <div class="flex cabecera__imagen">
+                <img src="img/flor.png" alt="Imagen de cempas&uacute;chil.">
+            </div>
         </header>
+        <!-- --------------- -->
+        <!-- VISTA DE INICIO -->
+        <!-- --------------- -->
         <div class="jumbotron inicio">
             <h1 class="titulo">Calaverita Literaria Interactiva</h1>
             <div class="flex flexrow">
+                <!-- AUTOR -->
                 <div class="flex inicioinfo">
-                    <p class="datos">Serrepe Ram&iacute;rez Julio Alejandro (asrr7)</p>
-                    <a target="_blank" href="http://www.ete.enp.unam.mx" aria-label="Enlace a la p&aacute;gina de ETE" title="Enlace a la p&aacute;gina de ETE">
-                        <p class="datos">ETE Computaci&oacute;n</p>
-                    </a>
-                    <p class="datos"><span class="cursor">Grupo 61A&#162;</span> </p>
+                    <p class="datos"><span class="cursor">Autor: asrr7 .</span> </p>
                 </div>
+                <!-- Pan Flotante -->
+                <div class="flex img__flotante">
+                    <img src="img/flor.png" alt="Imagen de cempas&uacute;chil.">
+                    <img src="img/calavera_dulce.png" alt="Imagen de calaverita de dulce.">
+                    <img src="img/pan.png" alt="Imagen de pan de muerto.">
+                </div>
+                <!-- Logo Prepa 6 -->
                 <div class="flex inicioimg">
                     <a target="_blank" href="https://www.prepa6.unam.mx" aria-label="Enlace a la web de prepa 6 - UNAM" title="Enlace a la p&aacute;gina de Prepa 6">
                         <img src="img/logo.webp" alt="Logo Prepa 6">
@@ -35,21 +53,17 @@
                 </div>
             </div>
         </div>
+        <!-- ------ -->
+        <!-- VERSOS -->
+        <!-- ------ -->
         <div class="contenedor versos">
-            <div>
-                <div class="primeramitad">
-                    <div class="animado animado1">
-                        <p>
-                            Creador de personajes, <br>
-                            con historias asombrosas, <br>
-                            dando cosas muy ingeniosas, <br>
-                            de buenos aprendizajes. <br>
-                        </p>
-                    </div>
-                </div>
-                <div class="segundamitad">
-                    <img src="img/papel-picado.png" alt="Papel picado de la Prepa 6 de propia autoria"> 
-                </div>
+            <div class="animado animado1">
+                <p>
+                    Creador de personajes, <br>
+                    con historias asombrosas, <br>
+                    dando cosas muy ingeniosas, <br>
+                    de buenos aprendizajes. <br>
+                </p>
             </div>
 
             <div class="animado animado2">
@@ -77,14 +91,26 @@
                     que da enseñanzas grandiosas. <br>
                 </p>
             </div>
+            <!-- -------------------- -->
+            <!-- CALAVERA DE STAN LEE -->
+            <!-- -------------------- -->
             <div>
                 <a target="_blank" href="https://unamglobal.unam.mx/el-legado-de-stan-lee/" aria-label="Enlace al Legado de Stan Lee - UNAM" title="Enlace al Legado de Stan Lee">
                     <img class="calavera_stan-lee"src="img/calavera.png" alt="Calavera de Stan Lee de propia autoria"> <!-- Dibujo de calaverita de Stan Lee de propia autoria -->
                 </a>
             </div>
         </div>
-        
     </div>
+
+    <footer class="flex">
+            <div class="flex cabecera__imagen footer__imagen">
+                <img src="img/papel-picado.png" alt="Papel picado de Prepa 6">
+                <img src="img/papel-picado.png" alt="Papel picado de Prepa 6">
+                <img src="img/papel-picado.png" alt="Papel picado de Prepa 6">
+            </div>
+            <br>
+            <a href="recursos.html" aria-label="Enlace a recursos utilizados.">Recursos Utilizados</a>
+    </footer>
     <script src="js/menu.js"></script>
 </body>
 </html>
