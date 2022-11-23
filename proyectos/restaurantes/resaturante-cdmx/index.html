@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resto - Web de Restaurante</title>
+    <meta name="description" content="Restaurante">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/brands.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+	<div class="boxed-page">
+            <nav id="navbar-header" class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="/"><img src="img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="lnr lnr-menu"></span></button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                        <ul class="navbar-nav d-flex justify-content-around">
+                            <div class="d-flex flex-lg-row flex-column justify-content-around" style="width: 80%;margin-left: 30%;">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#bienvenida">Bienvenida</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#especialidades" aria-haspopup="true" aria-expanded="false">Especialidades</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#menu">Men&uacute;</a>
+                                </li>
+                            </div>
+                        </ul>
+                        <a class="navbar-brand navbar-brand-center d-flex align-items-center only-desktop" href="#"><img src="img/logo.png" alt=""></a>
+                        <ul class="navbar-nav d-flex justify-content-around">
+                            <div class="d-flex flex-lg-row flex-column justify-content-around" style="margin-right: 30%;width: 80%;">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#testimonios">Testimonios</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#equipo">Equipo</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#horarios">Horarios</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>		
+            <div class="hero">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-6 hero-left">
+                            <h1 class="display-4 mb-5">¡Am&aacute;mos la<br>Comida Deliciosa!</h1>
+                            <div class="mb-2">
+                                <a class="btn btn-primary btn-shadow btn-lg" href="#menu" role="button">Explora nuestro Men&uacute;</a>
+                            </div>
+                            <ul class="hero-info list-unstyled d-flex text-center mb-0">
+                                <li class="border-right">
+                                    <span class="lnr lnr-rocket"></span>
+                                    <h5>Preparaci&oacute;n veloz</h5>
+                                </li>
+                                <li class="border-right">
+                                    <span class="lnr lnr-leaf"></span>
+                                    <h5>Comida Fresca</h5>
+                                </li>
+                                <li class="">
+                                    <span class="lnr lnr-bubble"></span>
+                                    <h5>Atenci&oacute;n al cliente</h5>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 hero-right">
+                            <div class="owl-carousel owl-theme hero-carousel">
+                                <div class="item"><img class="img-fluid" src="img/hero-1.jpg" alt=""></div>
+                                <div class="item"><img class="img-fluid" src="img/hero-2.jpg" alt=""></div>
+                                <div class="item"><img class="img-fluid" src="img/hero-3.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>		
+    
+    <!-- Welcome Section -->
+            <section id="bienvenida" class="bg-white section-padding">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-sm-5 img-bg d-flex shadow align-items-center justify-content-center justify-content-md-end img-2" style="background-image: url(img/hero-2.jpg);"></div>
+                            <div class="col-sm-7 py-5 pl-md-0 pl-4 bienvenidaPadding">
+                                <div class="heading-section pl-lg-5 ml-md-5">
+                                    <h2>¡Te damos la bienvenida a nuestro Restaurante!</h2>
+                                </div>
+                                <div class="pl-lg-5 ml-md-5">
+                                    <p>Somos un Restaurante ubicado en la Ciudad de M&eacute;xico que brinda servicios de excelente calidad, una m&iacute;nima espera y saz&oacute;n que nos caracteriza.</p>
+                                    <h3 class="mt-5">Platillos</h3>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img class="img-fluid img-cover" src="img/hero-1.jpg" />
+                                            <h6 class="txtCentrado">Desayuno &oacute;rganico</h6>
+                                        </div>
+                                        <div class="col-4">
+                                            <img class="img-fluid img-cover" src="img/hero-1.jpg" />
+                                            <h6 class="txtCentrado">Desayuno &oacute;rganico</h6>
+                                        </div>
+                                        <div class="col-4">
+                                            <img class="img-fluid img-cover" src="img/hero-1.jpg"/>
+                                            <h6 class="txtCentrado">Desayuno &oacute;rganico</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <!-- End of Welcome Section -->		<!-- Special Dishes Section -->
+            <section id="especialidades" class="bg-grey section-padding">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="heading-section text-center">
+                            <span class="subheading">Nuestras</span>
+                            <h2>Especialidades</h2>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-5 col-md-6 align-self-center py-5">
+                                <h2 class="special-number">01.</h2>
+                                <div class="dishes-text">
+                                    <h3><span>Bisteck</span><br></h3>
+                                    <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ea vero alias perferendis quas animi doloribus voluptates. Atque explicabo ea nesciunt provident libero qui eum, corporis esse quos excepturi soluta?</p>
+                                    <h3 class="special-dishes-price">$850.00</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                                <img src="img/steak.jpg" alt="" class="img-fluid shadow w-100">
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                                <img src="img/salmon-zucchini.jpg" alt="" class="img-fluid shadow w-100">
+                            </div>
+                            <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
+                                <h2 class="special-number">02.</h2>
+                                <div class="dishes-text">
+                                    <h3><span>Salmon</span><br> Zucchini</h3>
+                                    <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, accusamus culpa quam amet ipsam odit ea doloremque accusantium quo, itaque possimus eius. In a quis quibusdam omnis atque vero dolores!</p>
+                                    <h3 class="special-dishes-price">$1200.00</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-5 col-md-6 align-self-center py-5">
+                                <h2 class="special-number">03.</h2>
+                                <div class="dishes-text">
+                                    <h3><span>Bisteck</span><br> </h3>
+                                    <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ea vero alias perferendis quas animi doloribus voluptates. Atque explicabo ea nesciunt provident libero qui eum, corporis esse quos excepturi soluta?</p>
+                                    <h3 class="special-dishes-price">$850.00</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                                <img src="img/steak.jpg" alt="" class="img-fluid shadow w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- End of Special Dishes Section -->		<!-- Menu Section -->
+            <section id="menu" class="section-padding">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="row mb-5">
+                            <div class="col-md-12">
+                                <div class="heading-section text-center">
+                                    <span class="subheading">Revisa nuestro</span>
+                                    <h2>Men&uacute;</h2>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 menu-wrap">
+                                <div class="heading-menu">
+                                    <h3 class="text-center mb-5">Desayuno</h3>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 menu-wrap">
+                                <div class="heading-menu">
+                                    <h3 class="text-center mb-5">Comida</h3>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 menu-wrap">
+                                <div class="heading-menu">
+                                    <h3 class="text-center mb-5">Cena</h3>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                                <div class="menus d-flex align-items-center">
+                                    <div class="menu-img rounded-circle">
+                                        <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="row align-items-start">
+                                            <div class="col-8"><h4>Sandwitch de Huevo</h4></div>
+                                            <div class="col-4"><h4 class="text-muted menu-price">$30</h4></div>
+                                        </div>
+                                        <p>Carne, huevo y pan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <!-- End of menu Section -->		
+    <!-- Testimonial Section-->
+            <section id="testimonios" class="overlay bg-fixed section-padding" style="background-image: url(img/testi-bg.jpg);">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="heading-section text-center">
+                            <span class="subheading">Testimonios de</span>
+                            <h2>Consumidores satisfechos</h2>
+                        </div>
+                        <div class="row">
+                            <!-- Testimonios -->
+                            <div class="testi-content testi-carousel owl-carousel">
+                                <div class="testi-item">
+                                    <i class="testi-icon fa fa-3x fa-quote-left"></i>
+                                    <p class="testi-text">Buena comida y excelente atenci&oacute;n. Un lugar muy recomendado.</p>
+                                    <p class="testi-author">Daniel V&aacute;squez</p>
+                                </div>
+                                <div class="testi-item">
+                                    <i class="testi-icon fa fa-3x fa-quote-left"></i>
+                                    <p class="testi-text">Excelente servicio, buena comida y poco tiempo de espera.</p>
+                                    <p class="testi-author">Fabi&aacute;n L&oacute;pez</p>
+                                </div>
+                                <div class="testi-item">
+                                    <i class="testi-icon fa fa-3x fa-quote-left"></i>
+                                    <p class="testi-text">Un lugar econ&oacute;mico y bonito con excelente comida y buen ambiente.</p>
+                                    <p class="testi-author">Maria Flores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!-- End of Testimonial Section-->		
+<!-- Team Section -->
+            <section id="equipo" class="bg-white section-padding">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="heading-section text-center">
+                            <h2>Nuestro Equipo</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="team-card mb-5">
+                                    <img class="img-fluid" src="img/usuario.webp" alt="">
+                                    <div class="team-desc">
+                                        <h4 class="mb-0">Aaron Barrita</h4>
+                                        <p class="mb-1">CEO</p>
+                                        <ul class="list-inline mb-0 team-social-links">
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="team-card mb-5">
+                                    <img class="img-fluid" src="img/usuario.webp" alt="">
+                                    <div class="team-desc">
+                                        <h4 class="mb-0">Daniel Urrutia</h4>
+                                        <p class="mb-1">Chef</p>
+                                        <ul class="list-inline mb-0 team-social-links">
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="team-card mb-5">
+                                    <img class="img-fluid" src="img/usuario.webp" alt="">
+                                    <div class="team-desc">
+                                        <h4 class="mb-0">Esteb&aacute;n Flores</h4>
+                                        <p class="mb-1">Chef</p>
+                                        <ul class="list-inline mb-0 team-social-links">
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!-- End of Team Section -->			
+            <footer class="mastfoot pb-5 bg-white section-padding pb-0">
+                <div class="inner container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="footer-widget pr-lg-5 pr-0">
+                                <img src="img/logo.png" class="img-fluid footer-logo mb-3" alt="">
+                                <p>Revisa nuestros horarios de trabajo y/o cont&aacute;ctanos a trav&eacute;s de nuestras redes sociales. <br>Estamos dispuestos a atender sus dudas y sugerencias.</p>
+                                <nav class="nav nav-mastfoot justify-content-start">
+                                    <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" id="horarios">
+                            <div class="footer-widget px-lg-4 px-0">
+                                <h4 class="txtCentrado">Horarios de apertura</h4>
+                                <ul class="list-unstyled open-hours">
+                                    <li class="d-flex justify-content-between"><span>Lunes</span><span>9:00 - 24:00</span></li>
+                                    <li class="d-flex justify-content-between"><span>Martes</span><span>9:00 - 24:00</span></li>
+                                    <li class="d-flex justify-content-between"><span>Mi&eacute;rcoles</span><span>9:00 - 24:00</span></li>
+                                    <li class="d-flex justify-content-between"><span>Jueves</span><span>9:00 - 24:00</span></li>
+                                    <li class="d-flex justify-content-between"><span>Viernes</span><span>9:00 - 02:00</span></li>
+                                    <li class="d-flex justify-content-between"><span>S&aacute;bado</span><span>9:00 - 02:00</span></li>
+                                    <li class="d-flex justify-content-between"><span>Domingo</span><span> Cerrado</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex align-items-center">
+                            <p class="mx-auto text-center mb-0">Copyright 2022  -  Todos los derechos reservados.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>	
+        </div>
+    </div>
+	<!-- External JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+	<script src="vendor/select2/select2.min.js "></script>
+	<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+	<script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js"></script>
+	<script src="vendor/stellar/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/app.min.js "></script>
+</body>
+</html>
