@@ -1,1 +1,356 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de interfaz gráfica</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        h1{
+            font-family: 'Poppins',Arial;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+        body{
+            background: rgb(188, 179, 121);
+        }
+        .contenedor{
+            padding: 1%;
+            padding-top: 5%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .calculadora {
+            min-width: 150px;
+            width: 80%;
+            padding: 1.5%;
+            padding-top: 3%;
+            background-color: #447cf5;
+            border-radius: 5px;
+            border: 4px solid #333;
+            box-shadow: 5px 13px 25px 0px #000;
+        }
+        .tecla {
+            margin: 0 auto;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+            width: 15%;
+            cursor: pointer;
+            float: left;
+            justify-content: center;
+            background-color: #cc1212;
+            font-size: 1.5rem;
+            font-family: 'Poppins';
+            font-weight: 900;
+            padding: 1%;
+            border-radius: 5px;
+            border: 1px solid #000;
+            box-shadow: 5px 6px 10px 0px #000;
+        }
+        .pantalla{
+            display: flex;
+            width: 95%;
+            height: 50px;
+            background-color: #b9b9b9;
+            border-radius: 12px;
+            padding: 2%;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+            .texto{
+                text-align: right;
+                margin: auto;
+                font-family: 'Poppins';
+                font-size: 1.8rem;
+                font-weight: 900;
+            }
+        .operadores{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+            .operador {
+                background-color: #ff4b4b;
+            }
+        .numeros {
+            width: 60%;
+            float: left;
+        }
+            .numero {
+                background-color: #00ffff;
+                width: 20%;
+            }
+            .uno, .dos, .tres, .cero {
+                border: 0;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+            }
+            .cero {
+                margin: 0 auto;
+                width:90%;
+            }
+            .zero {
+                margin-top: 3px;
+                width: 100%;
+            }
+        .operadoresLado {
+            float: left;
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+        }
+            .izquierda, .derecha {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+            }
+            .operadorL {
+                width: 90%;
+                font-size: 2rem;
+                background-color: rgb(140, 82, 215);
+            }
+        @media screen and(min-width:800) {
+            .tecla, .operadorL,.texto,.numero {
+                font-size: 2rem;
+            }
+        }
+        @media screen and(min-width:1400) {
+            .tecla, .operadorL,.texto,.numero {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>CALCULADORA</h1>
+        <div id="calculadora" class="calculadora">
+            <div id="pantalla" class="pantalla">
+                <p id="txt" class="texto">calculadora</p>
+            </div>
+            <div class="teclas" id="teclas">
+                <div id="operadoresArriba" class="operadores">
+                    <div id="pi" class="operador tecla">&pi;</div>
+                    <div id="sqrt" class="operador tecla">&radic;</div>
+                    <div id="exp" class="operador tecla">&#94;</div>
+                    <div id="clear" class="operador tecla"><span class="material-symbols-outlined">delete</span></div>
+                    <div id="del" class="operador tecla"><span class="material-symbols-outlined">backspace</span></div>
+                </div>
+                <br>
+                <div id="numeros" class="numeros">
+                    <div class="uno">
+                        <div class="numero tecla" id="n9">9</div>
+                        <div class="numero tecla" id="n8">8</div>
+                        <div class="numero tecla" id="n7">7</div>
+                    </div>
+                    <div class="dos">
+                        <div class="numero tecla" id="n6">6</div>
+                        <div class="numero tecla" id="n5">5</div>
+                        <div class="numero tecla" id="n4">4</div>
+                    </div>
+                    <div class="tres">
+                        <div class="numero tecla" id="n3">3</div>
+                        <div class="numero tecla" id="n2">2</div>
+                        <div class="numero tecla" id="n1">1</div>
+                    </div>
+                    <div class="cero">
+                        <div class="numero tecla zero" id="n0">0</div>
+                    </div>
+                </div>
+                <div id="operadoresLado" class="operadoresLado">
+                    <div class="izquierda">
+                        <div id="suma" class="tecla operadorL">+</div>
+                        <div id="resta" class="tecla operadorL">-</div>
+                        <div id="igual" class="tecla operadorL">=</div>
+                    </div> <!-- + - * / = ! -->
+                    <div class="derecha">
+                        <div id="multiplicacion" class="tecla operadorL">x</div>
+                        <div id="division" class="tecla operadorL">/</div>
+                        <div id="fact" class="tecla operadorL">!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+
+
+
+    <script>
+        let textoPantalla = [];
+        let resultado = 0;
+        let cadena = [];
+        /* NUMEROS */
+        const n1 = document.getElementById("n1");n1.addEventListener("click",()=>{inNum("1")});
+        const n2 = document.getElementById("n2");n2.addEventListener("click",()=>{inNum("2")});
+        const n3 = document.getElementById("n3");n3.addEventListener("click",()=>{inNum("3")});
+        const n4 = document.getElementById("n4");n4.addEventListener("click",()=>{inNum("4")});
+        const n5 = document.getElementById("n5");n5.addEventListener("click",()=>{inNum("5")});
+        const n6 = document.getElementById("n6");n6.addEventListener("click",()=>{inNum("6")});
+        const n7 = document.getElementById("n7");n7.addEventListener("click",()=>{inNum("7")});
+        const n8 = document.getElementById("n8");n8.addEventListener("click",()=>{inNum("8")});
+        const n9 = document.getElementById("n9");n9.addEventListener("click",()=>{inNum("9")});
+        const n0 = document.getElementById("n0");n0.addEventListener("click",()=>{inNum("0")});
+        /* OPERADORES */
+        const pi = document.getElementById("pi");pi.addEventListener("click",()=>{inNum("&pi;")});
+        const sqrt = document.getElementById("sqrt");sqrt.addEventListener("click",()=>{inNum("&radic;")});
+        const exp = document.getElementById("exp");exp.addEventListener("click",()=>{inNum("&#94;")});
+        const del = document.getElementById("del");del.addEventListener("click",()=>{inNum("del")});
+        const clear = document.getElementById("clear");clear.addEventListener("click",()=>{inNum("clear")});
+        const suma = document.getElementById("suma");suma.addEventListener("click",()=>{inNum("+")});
+        const resta = document.getElementById("resta");resta.addEventListener("click",()=>{inNum("-")});
+        const multiplicacion = document.getElementById("multiplicacion");multiplicacion.addEventListener("click",()=>{inNum("*")});
+        const division = document.getElementById("division");division.addEventListener("click",()=>{inNum("/")});
+        const fact = document.getElementById("fact");fact.addEventListener("click",()=>{inNum("!")});
+        const igual = document.getElementById("igual");igual.addEventListener("click",()=>{inNum("=")});
+        
+        let txt = document.getElementById("txt");
+        /* FUNCIONES */
+        function pIgual(textoPantalla){
+            largo = textoPantalla.length;
+            sinExp = "";
+            /* CORTAR CADENA CON RAIZ Y EXPONENTE */
+            for(let c=0;c<largo;c++){
+                if(textoPantalla[c]!="&#94;" && textoPantalla[c]!="&radic;" && textoPantalla[c]!="*" && textoPantalla[c]!="/" && textoPantalla[c]!="+" && textoPantalla[c]!="-" && textoPantalla[c]!="!"){
+                    sinExp = sinExp+ textoPantalla[c];
+                    if(c==largo-1){
+                        cadena.push(sinExp);
+                    }
+                }else{
+                    cadena.push(sinExp);
+                    if(textoPantalla[c]=="&#94;"){
+                        cadena.push("&#94;");
+                    }else if(textoPantalla[c]=="&radic;"){
+                        cadena.push("&radic;");
+                    }else if(textoPantalla[c]=="*"){
+                        cadena.push("*");
+                    }else if(textoPantalla[c]=="/"){
+                        cadena.push("/");
+                    }else if(textoPantalla[c]=="+"){
+                        cadena.push("+");
+                    }else if(textoPantalla[c]=="-"){
+                        cadena.push("-");
+                    }else if(textoPantalla[c]=="!"){
+                        cadena.push("!");
+                    }
+                    else if(textoPantalla[c]=="&pi;"){
+                        cadena.push("3.14159265");
+                    }
+                    sinExp ="";
+                }
+            }
+            console.log(cadena);
+            lcadena = cadena.length;
+            for(let p=0;p<lcadena;p++){
+                if(cadena.includes("&#94;")){
+                    expo = cadena.indexOf("&#94;");
+                    numE = expo-1;
+                    exponen = expo+1;
+                    resulExpo = cadena[numE]**cadena[exponen];
+                    cadena[numE] = resulExpo;
+                    cadena.splice(expo,2);
+                }else if(cadena.includes("&radic;")){
+                    expo = cadena.indexOf("&radic;");
+                    exponen = expo+1;
+                    resulExpo = Math.sqrt(cadena[exponen]);
+                    cadena[exponen] = resulExpo;
+                    cadena.splice(expo,1);
+                }else if(cadena.includes("*")){
+                    expo = cadena.indexOf("*");
+                    numE = expo-1;
+                    exponen = expo+1;
+                    resulExpo = cadena[numE]*cadena[exponen];
+                    cadena[numE] = resulExpo;
+                    cadena.splice(expo,2);
+                }else if(cadena.includes("/")){
+                    expo = cadena.indexOf("/");
+                    numE = expo-1;
+                    exponen = expo+1;
+                    resulExpo = cadena[numE]/cadena[exponen];
+                    cadena[numE] = resulExpo;
+                    cadena.splice(expo,2);
+                }else if(cadena.includes("+")){
+                    expo = cadena.indexOf("+");
+                    numE = expo-1;
+                    exponen = expo+1;
+                    resulExpo = Number(cadena[numE])+cadena[exponen]*1;
+                    cadena[numE] = resulExpo;
+                    cadena.splice(expo,2);
+                }else if(cadena.includes("-")){
+                    expo = cadena.indexOf("-");
+                    numE = expo-1;
+                    exponen = expo+1;
+                    resulExpo = cadena[numE]-cadena[exponen];
+                    cadena[numE] = resulExpo;
+                    cadena.splice(expo,2);
+                }else if(cadena.includes("!")){
+                    expo = cadena.indexOf("!");
+                    numE = expo-1;
+                    if(cadena[numE] =="0"){
+                        resulExpo = 1;
+                    }else if(cadena[numE] =="1"){
+                        resulExpo = 1;
+                    }else if(cadena[numE] =="2"){
+                        resulExpo = 2;
+                    }else {
+                        resulExpo = 1;
+                        for(let z = cadena[numE];z>1;z--){
+                            resulExpo = resulExpo*z;
+                        }
+                    }
+                    cadena[numE] = resulExpo;
+                    cadena.splice(expo,1);
+                }
+            }
+            console.log(cadena);
+            resultado = cadena.join("");
+            console.log(resultado);
+            cadena = [];
+            return resultado;
+        }
+        function inNum(num){
+            if(num=="clear"){textoPantalla = [];}
+            else if(num=="del"){textoPantalla.pop();}
+            else if(num=="="){
+                resultado = pIgual(textoPantalla);
+                txt.innerHTML = resultado;
+                console.log(txt.value());                
+                resultado = 0;
+            } 
+            else {
+                textoPantalla.push(num);
+/* No 0 izqui */if(textoPantalla[0]=="0" || textoPantalla[0]=="-" || textoPantalla[0]=="+" || textoPantalla[0]=="*" || textoPantalla[0]=="/" || textoPantalla[0]=="!" || textoPantalla[0]=="&#94;"){
+                    textoPantalla.shift();
+                }
+                if(textoPantalla.at(-2)=="+" || textoPantalla.at(-2)=="-" || textoPantalla.at(-2)=="*" || textoPantalla.at(-2)=="/" || textoPantalla.at(-2)=="&radic;" || textoPantalla.at(-2)=="&#94;" || textoPantalla.at(-2)=="!"){
+                    if(num==1||num==2||num==3||num==4||num==5||num==6||num==7||num==8||num==9||num==0){
+                        
+                    }else {
+                        textoPantalla.pop();
+                    }
+                }
+            }
+            texto = textoPantalla.join("");
+            txt.innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
