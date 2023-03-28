@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ES-MX">
+<head>
+    <!--
+        _____     __     _    ____  ____  _____ 
+        | __ ) \ / /    / \  / ___||  _ \|___  |
+        |  _ \\ V /    / _ \ \___ \| |_) |  / / 
+        | |_) || |    / ___ \ ___) |  _ <  / /  
+        |____/ |_|   /_/   \_\____/|_| \_\/_/    
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julio Serrepe">
+    <title>Papelería | Tienda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <script src="../js/responsive.js"></script>
+</head>
+<body>
+    <header class="contenedor header">
+        <h1 class="titulo">Papeler&iacute;a</h1>
+        <nav class="nav" id="menuPC">
+            <ul class="lista lista-header">
+                <li title="Tienda"><a href="../index.php">Tienda</a></li>
+                <li title="Usuario"><a href="../usuario.php"><svg width="30" height="30" viewBox="0 0 24 24" style="fill:rgb(255,255,255);"><path d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"/><path d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"/></svg></a></li>
+                <li title="Carrito"><a href="../carrito.php"><svg class="iconos" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(255,255,255);"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg>
+                <li title="Facturas"><a href="../facturas.php">Facturas</a></li>
+                <li title="proveedores"><a href="../proveedores.php">Proveedores</a></li>
+            </ul>
+        </nav> 
+        <svg id="menuMobile" class="menu-mobile none" width="50" height="50" viewBox="0 0 24 24" style="fill: #33cccc;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+        <div class="enlaces-mobile-contenedor" id="enlacesMobile">
+            <ul class="lista-header-mobile">
+                <svg id="cerrarEnlacesMobile" width="50" height="50" viewBox="0 0 24 24" style="fill: #f33226;position: absolute; right: 45px; top: 10px;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
+                <li><a href="../index.php">Tienda</a></li>
+                <li><a href="../usuario.php"><svg width="30" height="30" viewBox="0 0 24 24" style="fill:rgb(255,255,255);"><path d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"/><path d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"/></svg></a></li>
+                <li><a href="../carrito.php"><svg class="iconos" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(255,255,255);"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg>
+                <li><a href="../facturas.php">Facturas</a></li>
+                <li><a href="../proveedores.php">Proveedores</a></li>
+            </ul>
+        </div>
+        <svg class="wave-header" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 310" version="1.1"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"/><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"/></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,62L60,56.8C120,52,240,41,360,41.3C480,41,600,52,720,72.3C840,93,960,124,1080,139.5C1200,155,1320,155,1440,160.2C1560,165,1680,176,1800,170.5C1920,165,2040,145,2160,113.7C2280,83,2400,41,2520,25.8C2640,10,2760,21,2880,25.8C3000,31,3120,31,3240,62C3360,93,3480,155,3600,175.7C3720,196,3840,176,3960,149.8C4080,124,4200,93,4320,103.3C4440,114,4560,165,4680,175.7C4800,186,4920,155,5040,155C5160,155,5280,186,5400,201.5C5520,217,5640,217,5760,206.7C5880,196,6000,176,6120,170.5C6240,165,6360,176,6480,160.2C6600,145,6720,103,6840,98.2C6960,93,7080,124,7200,155C7320,186,7440,217,7560,206.7C7680,196,7800,145,7920,129.2C8040,114,8160,134,8280,124C8400,114,8520,72,8580,51.7L8640,31L8640,310L8580,310C8520,310,8400,310,8280,310C8160,310,8040,310,7920,310C7800,310,7680,310,7560,310C7440,310,7320,310,7200,310C7080,310,6960,310,6840,310C6720,310,6600,310,6480,310C6360,310,6240,310,6120,310C6000,310,5880,310,5760,310C5640,310,5520,310,5400,310C5280,310,5160,310,5040,310C4920,310,4800,310,4680,310C4560,310,4440,310,4320,310C4200,310,4080,310,3960,310C3840,310,3720,310,3600,310C3480,310,3360,310,3240,310C3120,310,3000,310,2880,310C2760,310,2640,310,2520,310C2400,310,2280,310,2160,310C2040,310,1920,310,1800,310C1680,310,1560,310,1440,310C1320,310,1200,310,1080,310C960,310,840,310,720,310C600,310,480,310,360,310C240,310,120,310,60,310L0,310Z"/></svg>
+    </header>        <section class="contenedor contenedor-producto">
+            <h1 class="titulo">Cuaderno 100 Hojas Barrilito</h1>
+            <div class="contenedor contenedor-100">
+                <div class="contenedor contenedor-50">
+                    <div class="contenedor contenedor-50-img">
+                        <img src="../img/cuaderno-100-hojas-barrilito.webp" alt="Cuaderno 100 Hojas Barrilito">
+                    </div>
+                    <!-- Descripción del producto -->
+                    <p class="text-justify">El cuaderno Barrilito de 100 hojas es una herramienta esencial para cualquier estudiante, profesional o persona que necesite tomar notas y organizar su trabajo de manera eficiente. Con su cubierta resistente y duradera, este cuaderno puede soportar el uso diario y resistir el paso del tiempo.
+
+Cada hoja del cuaderno Barrilito está diseñada con líneas precisas y uniformes, lo que facilita la escritura y el dibujo. Además, las hojas son lo suficientemente gruesas para evitar que la tinta traspase la página, lo que garantiza un trabajo limpio y ordenado.
+
+El tamaño del cuaderno Barrilito es perfecto para llevarlo en una mochila, cartera o bolso de mano, lo que lo hace ideal para tomar notas en la escuela, en el trabajo o incluso durante tus viajes. Con 100 hojas disponibles, tendrás suficiente espacio para tomar notas durante varios días o incluso semanas.
+
+Además, el cuaderno Barrilito cuenta con un diseño atractivo y funcional que lo hace fácil de usar. Con una encuadernación en espiral, podrás voltear las hojas sin problemas, lo que te permite acceder a tus notas de manera rápida y sencilla.</p>
+                </div>
+                <div class="contenedor contenedor-50 contenedor-50-2">
+                    <form action="../carrito.php" method="post">
+                        <p class="texto"> <b>Stock: </b><span id="stock">18</span></p>
+                        <p class="texto"> <b>Precio:</b> $35 </p>
+                        <p class="texto"> <b>Proveedor:</b> Barrilito        </p>
+                        <input type="hidden" name="id" id="id" value="15">
+                        <input type="hidden" name="img" value="img/cuaderno-100-hojas-barrilito.webp">
+                        <input type="hidden" name="titulo" value="Cuaderno 100 Hojas Barrilito">
+                        <input type="hidden" name="precio" value="35">
+                        <input type="hidden" name="stock" id="inputStock" value="18">
+                        <input id="btnProducto" type="submit" name="enviado" class="tarjeta_producto-btn" value="Agregar al carrito">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <section class="contenedor contenedor-producto">
+            <h1 class="subtitulo">Comentarios del producto</h1>
+            <!-- Estructura para hacer un comentario -->
+                <div class="com-comentar">
+                    <div id="comentario" contenteditable="true" class="com-coment" placeholder="Escribe un comentario"></div>
+                    <button id="btnComentar" class="btn btn-enviar btn-comentar">Comentar</button>
+                </div>
+            <div id="comentarios" class="contenedor contenedor-comentarios"> 
+                            </div>
+        </section>
+        <!-- Actualizar la cantidad de stock desde servidor -->
+        <script src="../js/stock.js"></script>
+        <script src="../SRC/js_async/comentarios.js"></script>
+<div class="footer-pos">
+    <footer class="contenedor footer">
+        <div class="footer_info">
+            <div class="footer_info-txt">
+                <p>Julio Serrepe<br> Grupo: 61A</p>
+            </div>
+            <div class="footer_info-txt">
+                <p>ETE <br> Computaci&oacute;n</p>
+            </div>
+        </div>
+        <div class="footer_derechos">
+            <p>2023 - Derechos reservados</p>
+        </div>
+        </footer>
+        <svg class="wave-header" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 480" version="1.1"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(234.829, 76.716, 25.936, 1)" offset="0%"/><stop stop-color="rgba(255, 175.574, 0, 1)" offset="100%"/></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,96L60,96C120,96,240,96,360,112C480,128,600,160,720,176C840,192,960,192,1080,200C1200,208,1320,224,1440,192C1560,160,1680,80,1800,104C1920,128,2040,256,2160,312C2280,368,2400,352,2520,296C2640,240,2760,144,2880,96C3000,48,3120,48,3240,88C3360,128,3480,208,3600,240C3720,272,3840,256,3960,256C4080,256,4200,272,4320,296C4440,320,4560,352,4680,320C4800,288,4920,192,5040,192C5160,192,5280,288,5400,272C5520,256,5640,128,5760,64C5880,0,6000,0,6120,64C6240,128,6360,256,6480,296C6600,336,6720,288,6840,264C6960,240,7080,240,7200,240C7320,240,7440,240,7560,208C7680,176,7800,112,7920,72C8040,32,8160,16,8280,48C8400,80,8520,160,8580,200L8640,240L8640,480L8580,480C8520,480,8400,480,8280,480C8160,480,8040,480,7920,480C7800,480,7680,480,7560,480C7440,480,7320,480,7200,480C7080,480,6960,480,6840,480C6720,480,6600,480,6480,480C6360,480,6240,480,6120,480C6000,480,5880,480,5760,480C5640,480,5520,480,5400,480C5280,480,5160,480,5040,480C4920,480,4800,480,4680,480C4560,480,4440,480,4320,480C4200,480,4080,480,3960,480C3840,480,3720,480,3600,480C3480,480,3360,480,3240,480C3120,480,3000,480,2880,480C2760,480,2640,480,2520,480C2400,480,2280,480,2160,480C2040,480,1920,480,1800,480C1680,480,1560,480,1440,480C1320,480,1200,480,1080,480C960,480,840,480,720,480C600,480,480,480,360,480C240,480,120,480,60,480L0,480Z"/><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(16, 121, 121, 1)" offset="0%"/><stop stop-color="rgba(51, 204, 204, 1)" offset="100%"/></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,432L60,376C120,320,240,208,360,200C480,192,600,288,720,312C840,336,960,288,1080,256C1200,224,1320,208,1440,232C1560,256,1680,320,1800,320C1920,320,2040,256,2160,224C2280,192,2400,192,2520,184C2640,176,2760,160,2880,184C3000,208,3120,272,3240,296C3360,320,3480,304,3600,312C3720,320,3840,352,3960,304C4080,256,4200,128,4320,136C4440,144,4560,288,4680,336C4800,384,4920,336,5040,328C5160,320,5280,352,5400,352C5520,352,5640,320,5760,280C5880,240,6000,192,6120,200C6240,208,6360,272,6480,272C6600,272,6720,208,6840,208C6960,208,7080,272,7200,272C7320,272,7440,208,7560,184C7680,160,7800,176,7920,192C8040,208,8160,224,8280,248C8400,272,8520,304,8580,320L8640,336L8640,480L8580,480C8520,480,8400,480,8280,480C8160,480,8040,480,7920,480C7800,480,7680,480,7560,480C7440,480,7320,480,7200,480C7080,480,6960,480,6840,480C6720,480,6600,480,6480,480C6360,480,6240,480,6120,480C6000,480,5880,480,5760,480C5640,480,5520,480,5400,480C5280,480,5160,480,5040,480C4920,480,4800,480,4680,480C4560,480,4440,480,4320,480C4200,480,4080,480,3960,480C3840,480,3720,480,3600,480C3480,480,3360,480,3240,480C3120,480,3000,480,2880,480C2760,480,2640,480,2520,480C2400,480,2280,480,2160,480C2040,480,1920,480,1800,480C1680,480,1560,480,1440,480C1320,480,1200,480,1080,480C960,480,840,480,720,480C600,480,480,480,360,480C240,480,120,480,60,480L0,480Z"/></svg>
+</div>
+</body>
+</html>
