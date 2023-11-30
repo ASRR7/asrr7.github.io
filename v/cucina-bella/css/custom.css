@@ -1,0 +1,40 @@
+.space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.message-box>p {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.navbar-brand {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.right-box-pro {
+    display: flex;
+}
+    .right-box-pro>img {
+        margin: 0 auto;
+    }
+.time-waiting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time-waiting>span {
+    font-weight: 600;
+    font-size: 35px;
+    color: #fff;
+}
+.row-menu {
+    align-items: center;
+}
+.row-menu>.services-inner-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    max-height: 900px;
+}
